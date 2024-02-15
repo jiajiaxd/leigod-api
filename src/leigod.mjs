@@ -78,7 +78,7 @@ export class leiGodAccount {
 
     /**
      * 
-     * 如果时间正在消耗，则返回false，否则返回用户信息
+     * 如果时间暂停，则返回false。如果时间正在消耗，则返回用户信息。
      */
     async getWhetherTimeIsConsuming() {
         const info = await this.getAccountInfo();
