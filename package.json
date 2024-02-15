@@ -1,10 +1,11 @@
 {
   "name": "leigod-api",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "babel src --out-dir lib",
+    "prepublish": "npm run compile"
   },
   "author": "jiajiaxd",
   "license": "AGPL-3.0",
@@ -12,6 +13,12 @@
     "axios": "^1.6.7"
   },
   "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.23.9",
     "eslint": "^8.56.0"
   }
 }
