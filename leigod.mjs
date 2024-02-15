@@ -76,12 +76,17 @@ export class leiGodAccount {
         }
     }
 
+    /**
+     * 
+     * 如果时间正在消耗，则返回false，否则返回用户信息
+     */
     async getWhetherTimeIsConsuming() {
-        const status = (await this.getAccountInfo())['pause_status_id'];
+        const info = await this.getAccountInfo();
+        const status = info['pause_status_id'];
         if (status == 1) {
             return false;
         } else {
-            return true;
+            return info;
         }
     }
 
